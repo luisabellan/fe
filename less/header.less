@@ -1,0 +1,44 @@
+  header {
+    @media (max-width: 500px) {
+      .flex();
+    }
+  div.header {
+    .flex(@mainAxis: space-between);
+    height: 4rem;
+    padding: 3rem;
+    div.logo {
+      .flex(@mainAxis: flex-start);
+        @media (max-width: 500px) {
+          .flex(@direction: row-reverse, @mainAxis:center, @crossAxis: center);
+        }
+      img {
+        @media (max-width: 500px) {
+          display: none;
+        }
+        width: 5rem;
+        height: 4rem;
+      }
+      div.logo-text {
+        .flex(@direction: column);
+        margin-left: 2rem;
+        text-align: center;
+        h1 {
+          font-size: 3.5rem;
+          color: @primary-color;
+          font-weight: 700;
+        }
+        h2 {
+          @media (max-width: 500px) {
+            display: none;
+          }
+          font-size: 1.7rem;
+        }
+      }
+    }
+        div.login-register {
+          @media (max-width: 500px) {
+            display: none;
+          }
+        }
+  }
+}

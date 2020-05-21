@@ -1,0 +1,26 @@
+header {
+  a.open-menu {
+    display:none;
+  }
+  nav {
+    background-color: @tiber;
+    height: 4rem;
+    .flex(@mainAxis:flex-end);
+    a {
+      color: @white;
+      font-size: 1.8rem;
+      line-height: 2.4rem;
+      padding: 2rem;
+      text-decoration: none;
+      .active {
+        text-decoration: dashed;
+      }
+    }
+  }
+  @media (max-width: 500px) {
+    a.open-menu {
+      display: inline;
+    }
+    nav {display: none}
+  }
+}

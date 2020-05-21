@@ -1,0 +1,84 @@
+h1.title {
+  display:none;
+  @media (max-width: @mobileWidth) {
+    display:block;
+    text-align: center;
+  }
+}
+
+section.main {
+  .flex(@direction: row-reverse, @mainAxis: center, @crossAxis:flex-start);
+  width: 80%;
+  margin: 5rem auto;
+  
+  @media (max-width: @mobileWidth) {
+    .flex(@direction: column, @mainAxis:center, @crossAxis:center);
+    width: 100%;
+    text-align: center;
+    margin: auto;
+  }
+
+  .bp {
+    width: 50%;
+    margin-right: 1rem;
+    @media (max-width: @mobileWidth) {
+      width: 100%;
+      margin: 0;
+      h1 {
+        display:  none;
+      }
+    }
+    img {
+      max-width: 53rem;
+      @media (max-width: @mobileWidth) {
+        padding: 0;
+        max-width: 48rem;
+        margin: 0;
+      }
+      height: 39.3rem;
+      object-fit: contain;
+    }
+  }
+  
+  .content {
+    margin-top: 2rem;
+    padding-right: 2rem;
+    width: 50%;
+    @media (max-width: @mobileWidth) {
+      width: 100%;
+      padding-right: 0;
+      }
+    h2 {
+      font-size: 4.5rem;
+      font-weight: 1000;
+    }
+    p {
+      font-size: 1.9rem;
+    }
+  }
+
+  .log-sign{
+    margin-top: 8rem;
+    a {
+      display: block;
+      width: 80%;
+      @media (max-width: @mobileWidth) {
+        margin: 2rem auto;
+      }
+      color:@primary-color;
+      text-decoration: none;
+      text-align: center;
+      border-radius: .6rem;
+      border: 1px solid @primary-color;
+      font-family: 'Roboto Slab';
+      font-size: 2.5rem;
+      padding: 1rem;
+      font-weight: bold;
+      margin-bottom: 2rem;
+    }
+    a.sign-up {
+      background-color: @primary-color;
+      color: @white;
+    }
+  }
+}
