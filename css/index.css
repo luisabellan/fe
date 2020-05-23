@@ -472,3 +472,15 @@ section.main-reviews section.reviews section.review div.customer-info div.name-r
 section.main-reviews section.reviews section.review div.customer-info div.name-rating span.rating i {
   padding-right: 0.5rem;
 }
+section.about {
+  text-align: center;
+}
+section.about h4 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+section.about p {
+  width: 90%;
+  margin: auto;
+  line-height: 3rem;
+}
