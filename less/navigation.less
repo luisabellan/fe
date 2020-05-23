@@ -1,26 +1,66 @@
 header {
-  a.open-menu {
+  a{
+    text-decoration: none;
+  }
+  a.ham-menu {
     display:none;
   }
+
   nav {
     background-color: @tiber;
     height: 4rem;
+    text-align: center;
+
     .flex(@mainAxis:flex-end);
+
     a {
       color: @white;
       font-size: 1.8rem;
       line-height: 2.4rem;
       padding: 2rem;
       text-decoration: none;
-      .active {
-        text-decoration: dashed;
-      }
+
+    }
+
+    a.active, a:hover {
+      text-decoration: underline;
+    }
+
+    // In the desktop view, the Log In link is displayed outside the
+    // nav, but in the mobile, it's displayed in the nav
+    a:last-child {
+      display:none;
     }
   }
-  @media (max-width: 500px) {
-    a.open-menu {
+  
+  .mobile({
+    
+    a.ham-menu {
       display: inline;
     }
-    nav {display: none}
-  }
+    
+    nav {
+      .flex(@direction:column, @mainAxis:flex-start, @crossAxis: center);
+      height:auto;
+      background-color: @white;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 2;
+
+      a {
+        color: @primary-color;
+        width: 20rem;
+        background-color: @white;
+        border: 1px solid @primary-color;
+      }
+
+      a:last-child {
+        display:inline-block;
+      }
+
+      // This should be changed with JS
+      display:none;
+    }
+  });
 }
