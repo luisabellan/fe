@@ -1,11 +1,10 @@
 import React from "react";
 
-
-export default function Home() {
+export default function HowItWorks() {
     return (
         <div> 
             <h1>
-              Home Page!
+              How It Works!
             </h1>
         </div>
     )
