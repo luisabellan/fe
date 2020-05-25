@@ -5,11 +5,7 @@ export default function Footer() {
         <div> 
             <nav>
               <ul>
-                  <li>Home</li>
-                  <li>How It works</li>
-                  <li>About Us</li>
-                  <li>Reviews</li>
-                  <li>Sign Up</li>
+                  <li>&copy; </li>
               </ul>
             </nav>
         </div>
