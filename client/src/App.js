@@ -7,6 +7,7 @@ import PrivateRoute from "./utils_MosharrafMusa/PrivateRoute";
 import Login from "./components/user_MosharrafMusa/UserLoginPage";
 import Register from "./components/user_MosharrafMusa/UserRegisterPage";
 import StudentsPage from "./components/student_MosharrafMusa/StudentsPage";
+import RemindersPage from "./components/reminder_MosharrafMusa/RemindersPage";
 
 const useStyles = makeStyles({
   root: {
@@ -25,6 +26,7 @@ function App() {
       <Route path="/login" component={Login} />
       <Route path="/register" component={Register} />
 
+      <PrivateRoute path="/reminders" component={RemindersPage} />
       <PrivateRoute path="/students" component={StudentsPage} />
     </div>
   );

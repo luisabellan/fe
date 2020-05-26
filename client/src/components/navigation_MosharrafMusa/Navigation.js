@@ -24,7 +24,7 @@ function Navigation() {
   return (
     <header className={`header ${classes.root}`}>
       <Link className={classes.link} to="/students">
-        Dashboard
+        Students List
       </Link>
       <Link className={classes.link} to="/reminders">
         Reminder

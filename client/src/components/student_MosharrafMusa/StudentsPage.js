@@ -101,7 +101,7 @@ class StudentsPage extends React.Component {
       <div>
         <Navigation />
 
-        <h1 className="student-title">My Students</h1>
+        <h1 className="student-title">Students List</h1>
         <AddStudent update={this.updateStudents} />
         <br></br>
         <div className={`students ${classes.root}`}>
