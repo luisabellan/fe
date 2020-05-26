@@ -11,16 +11,25 @@ import Navigation from "../navigation_MosharrafMusa/Navigation";
 
 const styles = {
   root: {
-    width: "500px",
+    width: "42rem",
     margin: "0 auto",
+    display: "flex",
+    flexDirection: "row",
+    flexWrap: "wrap",
   },
   student: {
     border: "1px solid black",
     borderRadius: "5px",
     backgroundColor: "#fafafa",
-    width: "300px",
+    width: "18rem",
     paddingBottom: "20px",
     margin: "0 auto 20px",
+  },
+  button: {
+    margin: "0 auto",
+    width: "8rem",
+    varient: "conatined",
+    color: "primary",
   },
 };
 
@@ -93,22 +102,22 @@ class StudentsPage extends React.Component {
         <Navigation />
 
         <h1 className="student-title">My Students</h1>
-
+        <AddStudent update={this.updateStudents} />
+        <br></br>
         <div className={`students ${classes.root}`}>
           {this.state.students.map((student) => (
             <div key={student.id} className={`student ${classes.student}`}>
               <div className="student-info">
-                <p className="info">
+                <h2 className="info">
                   {student.firstName} {student.lastName}
-                </p>
+                </h2>
 
-                <p className="info">{student.email}</p>
+                <p className="info">Email: {student.email}</p>
 
                 <button onClick={() => this.removeStudent(student.id)}>
-                  delete
+                  Delete Student
                 </button>
               </div>
-              <AddStudent update={this.updateStudents} />
             </div>
           ))}
         </div>

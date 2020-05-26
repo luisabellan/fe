@@ -7,12 +7,19 @@ import { axiosWithAuth } from "../../utils_MosharrafMusa/axiosWithAuth";
 const useStyles = makeStyles({
   root: {
     display: "flex",
-    flexDirection: "column",
-    width: "300px",
+    flexDirection: "row",
+    justifyContent: "center",
+    width: "18rempx",
     margin: "0 auto",
   },
   input: {
     marginBottom: "10px",
+  },
+  button: {
+    text: "Add Student",
+    varient: "contained",
+    color: "primary",
+    width: "7rem",
   },
 });
 
@@ -58,7 +65,7 @@ const AddStudent = (props) => {
 
   return (
     <div className="add-student">
-      <h3 className="title">Add Student</h3>
+      {/* <h3 className="title">Add Student</h3> */}
 
       <form onSubmit={handleSubmit} className={`add-container ${classes.root}`}>
         <input
@@ -87,7 +94,7 @@ const AddStudent = (props) => {
           placeholder="Email"
           className={`add-input ${classes.input}`}
         />
-        <button className="add-button">Submit</button>
+        <button className="add-button">Add Student</button>
       </form>
     </div>
   );
