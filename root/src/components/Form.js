@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import * as yup from 'yup';
+
 import axios from 'axios';
 
 const formSchema = yup.object().shape({
@@ -58,12 +59,16 @@ export default function Form (){
     const formSubmit = e =>{
         e.preventDefault();
         console.log("form submitted!");
-        axios.post("https://reqres.in/api/users", formState)
-        .then(response => setUsers([
-            //Changed response from console.log to instead go through Users
-            ...users,
-            formState
-        ]))
+        axios.post("https://better-professor-web-app.herokuapp.com/api/auth/register", formState)
+        .then(response => {
+            console.log(response)
+            setUsers([
+            
+                //Changed response from console.log to instead go through Users
+                ...users,
+                formState
+            ])
+        })
         .catch(error => console.log(error))
         setFormState({
             name: '',
