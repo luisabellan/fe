@@ -30,7 +30,7 @@ export default function Form (){
         password:"",
         terms: ""
     });
-    //Yup Validation
+    // Yup Validation
     const validate = e =>{
         let value = e.target.type==="checkbox"? e.target.checked:e.target.value;
         yup.reach(formSchema, e.target.name)
