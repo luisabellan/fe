@@ -1,5 +1,6 @@
 import React from "react";
 import { withStyles } from "@material-ui/core/styles";
+import { Link } from "react-router-dom";
 
 // import axios with auth
 import { axiosWithAuth } from "../../utils_MosharrafMusa/axiosWithAuth";
@@ -111,9 +112,11 @@ class StudentsPage extends React.Component {
                 <h2 className="info">
                   {student.firstName} {student.lastName}
                 </h2>
-
                 <p className="info">Email: {student.email}</p>
-
+                <Link to="/myproject">
+                  <button>View Project</button>
+                </Link>
+                <br></br>
                 <button onClick={() => this.removeStudent(student.id)}>
                   Delete Student
                 </button>

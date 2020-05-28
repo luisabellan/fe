@@ -109,7 +109,7 @@ class RemindersPage extends React.Component {
       <div>
         <Navigation />
 
-        <h1 className="reminder-title">My Reminders</h1>
+        <h1 className="reminder-title">All Reminders</h1>
         {this.state.edit === true ? (
           <EditReminder
             name={this.state.name}

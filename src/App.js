@@ -28,6 +28,7 @@ function App() {
 
       <PrivateRoute path="/reminders" component={RemindersPage} />
       <PrivateRoute path="/students" component={StudentsPage} />
+      <PrivateRoute path="/myproject" component={RemindersPage} />
     </div>
   );
 }
