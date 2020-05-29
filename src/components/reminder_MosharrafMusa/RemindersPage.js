@@ -127,11 +127,13 @@ class RemindersPage extends React.Component {
           {this.state.reminders.map((reminder) => (
             <div key={reminder.id} className={`reminder ${classes.reminder}`}>
               <div className="reminder-info">
-                <h3 className="info">{reminder.name}</h3>
-                <p className="info">Reminder Date: {reminder.send_date}</p>
+                <h2 className="info">{reminder.name}</h2>
+                <p className="info">
+                  <strong>Date:</strong> {reminder.send_date}
+                </p>
                 <p className="info">
                   {" "}
-                  Reminder : <em>{reminder.description}</em>
+                  <strong> Reminder :</strong> <em>{reminder.description}</em>
                 </p>
 
                 <button
