@@ -15,6 +15,9 @@ const useStyles = makeStyles({
   input: {
     marginBottom: "10px",
   },
+  textarea: {
+    height: "80px",
+  },
 });
 
 const EditReminder = (props) => {
@@ -74,15 +77,15 @@ const EditReminder = (props) => {
           onChange={handleSendDate}
           className={`edit-input ${classes.input}`}
         />
-        <input
+        <textarea
           type="textarea"
           name="description"
           value={description}
           onChange={handleDescription}
-          className={`edit-input ${classes.input}`}
+          className={`edit-input ${classes.textarea}`}
         />
 
-        <button className="edit-button">Add Reminder</button>
+        <button className="edit-button">Edit Reminder</button>
       </form>
     </div>
   );
